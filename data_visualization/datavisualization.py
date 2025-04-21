@@ -20,7 +20,7 @@ print(df.info())
 
 #1. Histograms
 plt.figure(figsize=(12, 5))
-df['Cost_of_the_Product'].hist(bins=30, color='skyblue')
+sb.histplot(df['Cost_of_the_Product'],bins=30,kde=True, color='skyblue')
 plt.title('Cost of the Product')
 plt.xlabel('Cost')
 plt.ylabel('Frequency')
@@ -58,7 +58,7 @@ plt.show()
 
 #6. Histogram for discount
 plt.figure(figsize=(8, 4))
-df['Discount_offered'].hist(bins=30, color='orange')
+sb.histplot(df['Discount_offered'],bins=30,kde=True, color='orange')
 plt.title('Distribution of Discounts Offered')
 plt.xlabel('Discount Offered')
 plt.ylabel('Frequency')
